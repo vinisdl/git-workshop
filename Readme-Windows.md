@@ -83,8 +83,6 @@ para acompanhar o commit ao mesmo tempo.
 
     $ git commit -m "Estou adicionando dois novos arquivos"
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
-Com dificuldades? Peça ajuda à equipe do workshop
 
 Vamos ver o que aconteceu
 --------------------------
@@ -109,7 +107,7 @@ envolvidos em cada commit. Para ver mais informações sobre um commit, use
 Você deve ver algo semelhante a:
 
     commit 5a1fad96c8584b2c194c229de7e112e4c84e5089
-    Author: kuahyeow 
+    Author: vinisdl 
     Date:   Sun Jul 17 19:13:42 2011 +1200
 
         Estou adicionando dois novos arquivos
@@ -121,8 +119,7 @@ Você deve ver algo semelhante a:
     new file mode 100644
     index 0000000..e69de29
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
-Com dificuldades? Peça ajuda à equipe do workshop
+
 
 Uma digressão necessária
 ------------------------
@@ -154,8 +151,6 @@ Você deve ver algo como o seguinte:
     @@ -0,0 +1 @@
     +Lorem ipsum Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
-Com dificuldades? Peça ajuda à equipe do workshop
 
 Área de preparação novamente
 ----------------------------
@@ -165,8 +160,6 @@ lembra como fazer isso?
 
 Em seguida, verifique o `status` de `alice.txt`. Está na área de preparação agora?
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
-Com dificuldades? Peça ajuda à equipe do workshop
 
 Desfazendo
 ----------
@@ -184,8 +177,6 @@ Aqui está como voltar da área de preparação:
 
 Compare o `git status` agora com o git status da seção anterior. Como isso difere?
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
-Com dificuldades? Peça ajuda à equipe do workshop
 
 Sua área de preparação agora deve estar vazia. O que aconteceu com as mudanças de Lorem
 Ipsum? Elas ainda estão lá. Estamos agora de volta ao estado justo antes de
@@ -202,9 +193,6 @@ Para conseguir isso, usamos `git checkout`, assim:
     $ git checkout alice.txt
 
 Você agora desfez suas mudanças. Seu arquivo agora está vazio.
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
-Com dificuldades? Peça ajuda à equipe do workshop
 
 Branching
 ---------
@@ -247,8 +235,6 @@ Agora, vamos compará-los com a branch master. Use `git diff`:
 
 Basicamente, o que a saída acima indica é que `test.txt` está presente na branch `exp1`, mas está ausente na branch `master`.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
-Está com dificuldade? Peça ajuda à equipe do workshop
 
 Agora você me vê, agora você não me vê
 ---------------------------------------
@@ -266,17 +252,15 @@ Como você pode ver, o novo arquivo que você criou na outra branch desapareceu.
 
 Agora, volte para a branch `exp1` e verifique se o `test.txt` está agora presente.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
-Está com dificuldade? Peça ajuda à equipe do workshop
 
-Mesclagem
+Merge
 ---------
 
-Agora vamos tentar a mesclagem. Eventualmente, você vai querer mesclar duas branches após a conclusão do trabalho. `git merge` permite fazer isso.
+Agora vamos tentar a merge. Eventualmente, você vai querer mergear duas branches após a conclusão do trabalho. `git merge` permite fazer isso.
 
-A mesclagem no Git funciona primeiro alternando para a branch na qual você deseja *mesclar*, e depois executando o comando para mesclar a outra branch.
+A merge no Git funciona primeiro alternando para a branch na qual você deseja *mergear*, e depois executando o comando para mergear a outra branch.
 
-Agora queremos mesclar nossa branch `exp1` na `master`. Primeiro, mude para a branch master:
+Agora queremos mergear nossa branch `exp1` na `master`. Primeiro, mude para a branch master:
 
     git checkout master
 
@@ -291,14 +275,14 @@ Você vê a seguinte saída?
      1 files changed, 1 insertions(+), 0 deletions(-)
      create mode 100644 test.txt
 
-Você deve estar na branch para a qual deseja mesclar e, em seguida, sempre especificar a branch que deseja mesclar.
+Você deve estar na branch para a qual deseja mergear e, em seguida, sempre especificar a branch que deseja mergear.
 
 Neste ponto, você também pode usar `gitk` para visualizar as alterações e como as duas branches foram mescladas.
 
 Conflitos de Mesclagem
 ----------------------
 
-O Git é bastante bom em mesclar automaticamente, mesmo quando o mesmo arquivo é editado. No entanto, existem algumas situações em que a mesma linha de código é editada de maneira que o computador não consegue determinar como mesclar. Isso resultará em um conflito que você terá que resolver.
+O Git é bastante bom em mergear automaticamente, mesmo quando o mesmo arquivo é editado. No entanto, existem algumas situações em que a mesma linha de código é editada de maneira que o computador não consegue determinar como mergear. Isso resultará em um conflito que você terá que resolver.
 
 Agora, vamos praticar a resolução de conflitos de mesclagem. Lembre-se de que os conflitos são causados por mesclagens que afetam o mesmo bloco de código.
 
@@ -306,10 +290,7 @@ Aqui está uma branch que preparei anteriormente. A branch é chamada `alpher`. 
 
     $ git checkout alpher
 
-Você deve agora ter uma nova branch chamada `alpher`. Tente mesclar essa branch na `master` agora e resolva o conflito resultante.
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
-Está com dificuldade? Peça ajuda à equipe do workshop
+Você deve agora ter uma nova branch chamada `alpher`. Tente mergear essa branch na `master` agora e resolva o conflito resultante.
 
 Resolvendo um Conflito
 ----------------------
@@ -332,7 +313,7 @@ Se você abrir o arquivo `gamow.txt`, verá algo semelhante a:
     >>>>>>> alpher
 
 O Git usa marcadores de resolução de conflitos padrão. A parte superior do bloco, que é tudo entre `<<<<<< HEAD` e `======`, é o que estava na sua branch atual.\
-A parte inferior é a versão presente na branch `alpher`. Para resolver o conflito, você deve escolher um dos lados ou mesclar os dois conforme achar melhor.
+A parte inferior é a versão presente na branch `alpher`. Para resolver o conflito, você deve escolher um dos lados ou mergear os dois conforme achar melhor.
 
 Por exemplo, eu posso decidir escolher a versão da branch `alpher`.
 
@@ -340,8 +321,6 @@ Agora, tente **resolver o conflito de mesclagem**. Escolha o texto que você ach
 
 Depois de fazer isso, você pode marcar o conflito como resolvido usando `git add` e `git commit`.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
-Está com dificuldade? Peça ajuda à equipe do workshop
 
     $ git add gamow.txt
     $ git commit -m "Conflito resolvido"
@@ -358,7 +337,7 @@ Você aprendeu:
 3. Verificar o status
 4. Verificar diferenças
 5. Desfazer alterações
-6. Criar branches e mesclar
+6. Criar branches e mergear
 7. Resolver conflitos
 
 Agora você pode escolher dois caminhos: Parte II (abaixo), que cobre viagens no tempo e manipulação do histórico do Git, ou Parte III (ainda mais abaixo), que cobre pull requests do GitHub e gifs de gatos.
